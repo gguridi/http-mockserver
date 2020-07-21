@@ -1,5 +1,7 @@
 # HTTP mock server
 
+[![Build Status](https://travis-ci.org/gguridi/http-mockserver.svg?branch=master)](https://travis-ci.org/gguridi/http-mockserver)
+
 This repository contains the code to generate docker images to easily mock an
 http server that will return specific responses to the configured requests. It's intended to
 be used in testing/development environment for easily check integrations.

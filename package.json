@@ -3,11 +3,18 @@
   "version": "1.0.0",
   "description": "Docker image to easily mock a HTTP server using mockserver library",
   "scripts": {
-    "start": "mockserver -p 80 -q -m /opt/api"
+    "start": "mockserver -p 80 -q -m /opt/api",
+    "build": "docker build -t http-mockserver .",
+    "docker-run": "docker run -d -p 80:80 -v `pwd`/tests/api:/opt/api http-mockserver",
+    "test": "./node_modules/jest/bin/jest.js --forceExit"
   },
   "author": "gorka.guridi@gmail.com",
   "license": "ISC",
   "dependencies": {
     "mockserver": "^3.1.1"
+  },
+  "devDependencies": {
+    "frisby": "^2.1.2",
+    "jest": "^26.1.0"
   }
 }

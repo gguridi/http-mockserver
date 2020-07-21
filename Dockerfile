@@ -8,6 +8,6 @@ RUN mkdir -p ${SERVER_FOLDER}
 COPY . ${SERVER_FOLDER}
 WORKDIR ${SERVER_FOLDER}
 
-RUN yarn install
+RUN yarn install --production
 
 ENTRYPOINT ["yarn", "start"]

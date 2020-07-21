@@ -1,0 +1,11 @@
+language: node_js
+
+services:
+  - docker
+
+before_install:
+- yarn run build
+- yarn run docker-run
+
+script:
+- yarn test
